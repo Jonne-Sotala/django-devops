@@ -8,6 +8,8 @@ services:
       - 8000:8000
     volumes:
       - static:/static
+    environment:
+      - PORT=8000
 
   nginx:
     build: ./nginx
