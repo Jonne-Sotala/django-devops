@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  django:
+    build: ./app
+    ports:
+      - 8000:8000
+    volumes:
+      - static:/static
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    volumes:
+      - static:/static
+    depends_on:
+      - django
+
+volumes:
+  static:
+
