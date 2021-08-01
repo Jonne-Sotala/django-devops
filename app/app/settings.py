@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['app', 'localhost', '127.0.0.1', 'django-devops1.herokuapp.com'
 # Application definition
 
 INSTALLED_APPS = [
+    'index.apps.IndexConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
